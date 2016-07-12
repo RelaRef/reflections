@@ -18,7 +18,14 @@ change?
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	Branches allowing you to make some interesting versions of your product,
+	possibility to change between them allowing you easy switch between different versions,
+	and test them out, without breaking main master product, with allowence to inherit all fixes,
+	and features from master branch.
+
 How do the diagrams help you visualize the branch structure?
+
+	they help you to see which branches at what stage were created and for what purpose actualy.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
