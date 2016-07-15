@@ -1,4 +1,27 @@
 +------------------------------------------------------------------------------------------------------------+
+|   Git Remote                                                                                          |
++------------------------------------------------------------------------------------------------------------+
+
+PUSH
+
+	git remote add origin https://github.com/RelaRef/reflections.git
+	git remote -v
+		origin  https://github.com/RelaRef/reflections.git (fetch)
+		origin  https://github.com/RelaRef/reflections.git (push)
+
+	git push origin master
+		Counting objects: 34, done.
+		Delta compression using up to 4 threads.
+		Compressing objects: 100% (33/33), done.
+		Writing objects: 100% (34/34), 2.29 MiB | 333.00 KiB/s, done.
+		Total 34 (delta 13), reused 0 (delta 0)
+		To https://github.com/RelaRef/reflections.git
+		 * [new branch]      master -> master
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
 | Git Get Gather (Config Information)                                                                        |
 +------------------------------------------------------------------------------------------------------------+
 
@@ -173,26 +196,6 @@ Diagramming Tools
 	* gliffy
 	* yUML
 
-
-
-
-+------------------------------------------------------------------------------------------------------------+
-|   Git Remote Push                                                                                          |
-+------------------------------------------------------------------------------------------------------------+
-
-$ git remote add origin https://github.com/RelaRef/reflections.git
-$ git remote -v
-	origin  https://github.com/RelaRef/reflections.git (fetch)
-	origin  https://github.com/RelaRef/reflections.git (push)
-
-$ git push origin master
-	Counting objects: 34, done.
-	Delta compression using up to 4 threads.
-	Compressing objects: 100% (33/33), done.
-	Writing objects: 100% (34/34), 2.29 MiB | 333.00 KiB/s, done.
-	Total 34 (delta 13), reused 0 (delta 0)
-	To https://github.com/RelaRef/reflections.git
-	 * [new branch]      master -> master
 
 
 
