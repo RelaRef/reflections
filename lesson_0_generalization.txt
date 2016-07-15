@@ -18,8 +18,48 @@ PUSH
 		To https://github.com/RelaRef/reflections.git
 		 * [new branch]      master -> master
 
+PULL
+
+	git pull origin master
+		remote: Counting objects: 3, done.
+		remote: Compressing objects: 100% (3/3), done.
+		remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+		Unpacking objects: 100% (3/3), done.
+		From https://github.com/RelaRef/reflections
+		 * branch            master     -> FETCH_HEAD
+		   3239f7d..3300d2a  master     -> origin/master
+		Updating 3239f7d..3300d2a
+		Fast-forward
+		 lesson_3_reflections.txt | 3 ++-
+		 1 file changed, 2 insertions(+), 1 deletion(-)
 
 
+MERGING REMOTE CHANGES
+
+	git pull origin master =	git branch -a
+					git fetch origin
+					git merge master origin/master
+					git log origin/master
+					git diff origin/master master
+					git merge origin/master master
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Fast-forward Merges                                                                        |
++------------------------------------------------------------------------------------------------------------+
+
+	fast-forward merges are possible when branches reach each other on the tree
+	
+	O->O->O->O	(yes here it is possible, hence A reachig B)
+	   B     A
+	
+		
+                O A
+	       /
+	O->O->O          (no fast forward merge possible)
+	       \
+		O B
 
 +------------------------------------------------------------------------------------------------------------+
 | Git Get Gather (Config Information)                                                                        |
