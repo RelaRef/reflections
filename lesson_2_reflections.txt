@@ -36,4 +36,4 @@ What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
 
 	at this moment, only human is able to investigate of what should be keped, changed or deleted,
-	from precious code, so let's alway do by the hand ;)
+	from precious code, so let's always do by the hand ;)
