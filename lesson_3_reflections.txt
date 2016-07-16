@@ -24,7 +24,10 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    you can continue working without internet conection on your project,
+    one more place your project saved,
+    and you are able to analyze who and what doing there,
+    check the diferences, see the state of the project, and more.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
