@@ -98,6 +98,7 @@ git log
 git log --stat
 git log --graph
 git log --graph -decorate -oneline -all
+git log -n 1				#show only the last commit
 
 git status
 

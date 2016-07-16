@@ -38,4 +38,7 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    branches act as lables, sandboxes, etc, allowing us to experiment with our needs
+    of adding fetures, fixes, typos, documentations, styles, etc, without breaking
+    a product maint line, after successful merging and testing we can fast-forward merge
+    our results to the main line called master branch.
