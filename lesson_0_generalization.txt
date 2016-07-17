@@ -51,7 +51,7 @@ MERGING REMOTE CHANGES
 
 	fast-forward merges are possible when branches reach each other on the tree
 	
-	O->O->O->O	(yes here it is possible, hence A reachig B)
+	O->O->O->O	(yes here it is possible, hence A reaching B)
 	   B     A
 	
 		
@@ -85,7 +85,7 @@ ALIAS
 
 SECURITY
 	
-	git config --global credential.helper wincred		#command line tool to save password localy
+	git config --global credential.helper wincred		#command line tool to save password locally
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -108,14 +108,14 @@ git diff UID_OLD UID_NEW
 git diff BRANCH_NAME_A BRANCH_NAME_B
 git show COMMMIT_ID			#show the diff related to the parent
 
-git config --help			#opens in browser the help recource 
+git config --help			#opens in browser the help resource 
 
 git checkout UID_COMMMIT		#
 git checkout master			#to return to master HEAD
 git checkout -b new_branch_name		#
 
 
-git reset --hard			#use ex: recover an file deleted by accident,
+git reset --hard			#use ex: recover a file deleted by accident,
 					#which shown in the "stage area" as deleted
 
 git gc					#If a branch is deleted and leaves some commits unreachable from existing branches, those 
@@ -167,11 +167,11 @@ git branch -d BRANCH_B			#delete the branch after merge, only the branch label i
 
 
 +------------------------------------------------------------------------------------------------------------+
-| Bash Commandos                                                                                             |
+| Bash Commands                                                                                              |
 +------------------------------------------------------------------------------------------------------------+
 	ls -l | grep "git*"		#lists contents with git in the name
-	diff -u game_old.js game_new.js #show the diferences
-	scp				#stands for "secure copy" and lets you securely copy a directory from one computer to another.
+	diff -u game_old.js game_new.js #show the differences
+	scp				#stands for "secure copy" and lets you securelly copy a directory from one computer to another.
 
 
 
@@ -202,8 +202,8 @@ git branch -d BRANCH_B			#delete the branch after merge, only the branch label i
 +------------------------------------------------------------------------------------------------------------+
 
 Synonims
-	version-control		a folder (a copy of some contents representing another one version)
-	commit			check point (represents version of the file), a snapshot
+	version-control		a folder (a copy of some contents representing another version)
+	commit			checkpoint (represents version of the file), a snapshot
 	branch			a label
 	merge			combine
 
@@ -244,17 +244,17 @@ Diagramming Tools
 |   Cource Reflections Backup                                                                                |
 +------------------------------------------------------------------------------------------------------------+
 
-You do not lose your previos work with the version control.
-Manual Commits. Give you more control on what en when is saved. By commenting every logical 
+You do not lose your previous work with the version control.
+Manual Commits. Give you more control on what and when something is saved. By commenting every logical 
 commit, you create handy overview.
 
 08/07/2016 14:00
-Multi-File commits by git are seen as dependencies. One file version control is ok for any small tasks. But 
-big projects requere more comlicated workflow with possibility to breack it up in pieces definde a bunch 
-of the steps, to fix my mistackes by going forward and backward. Kind of get everything in the right way 
-before showing to other people. It has steep learning curv but it's woth it because power is so great, and 
-once you do learn it, once you past the curve you can really do a lot. And it's things that you couldn't do 
-without learned that much.
+Multi-File commits by git are seen as dependencies. One file version control is ok for any small task. But 
+big projects require more complicated workflow with possibility to break it up in pieces defined by a bunch 
+of the steps, to fix my mistakes by going forward and backward. Kind of get everything in the right way 
+before showing to other people. It has steep learning curve but it's worth it because power is so great, and 
+once you learn it, once you are past the curve you can really do a lot. And these are the things that you 
+couldn't do without learning so much.
 
 What do you think are the pros and cons of manually chosing when to create a commit, like you do in 
 Git, vs having versions autamaticaly saved, like Google Docs dose?
