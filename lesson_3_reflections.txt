@@ -24,21 +24,21 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    you can continue working without internet conection on your project,
-    one more place your project saved,
-    and you are able to analyze who and what doing there,
-    check the diferences, see the state of the project, and more.
+    you can continue working without internet connection on your project,
+    one more place your project is saved at,
+    and you are able to analyze who is doing what there,
+    check the differences, see the state of the project, and more.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    GitHub manages pullrequests send notifications etc. So now I learned about GitHub,
-    it seems easy work with and harder without.
+    GitHub manages pull-requests, sends notifications etc. So now I learned about GitHub,
+    it seems easy to work with and harder without.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    branches act as lables, sandboxes, etc, allowing us to experiment with our needs
-    of adding fetures, fixes, typos, documentations, styles, etc, without breaking
-    a product maint line, after successful merging and testing we can fast-forward merge
+    branches act as labels, sandboxes, etc, allowing us to experiment with our needs
+    to add features, fixes, typos, documentations, styles, etc, without breaking
+    a product's main line, after successful merging and testing we can fast-forward merge
     our results to the main line called master branch.
