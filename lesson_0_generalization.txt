@@ -136,6 +136,9 @@ git merge -abort			#run if you want to stop current merging in progress
 git branch -d BRANCH_B			#delete the branch after merge, only the branch label is deleted, commits are accessible through the master branch
 
 
+git push origin --delete <branchName>	#delete a remote branch
+
+
 
 
 +------------------------------------------------------------------------------------------------------------+
