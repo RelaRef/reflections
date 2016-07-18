@@ -138,6 +138,8 @@ git branch -d BRANCH_B			#delete the branch after merge, only the branch label i
 
 git push origin --delete <branchName>	#delete a remote branch
 
+git commit -m "Fixes #1"		#closes pull-request with the correspondig number
+
 
 
 
