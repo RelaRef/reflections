@@ -87,6 +87,10 @@ SECURITY
 	
 	git config --global credential.helper wincred		#command line tool to save password localy
 
+ADVANCED
+	git config --system core.longpaths true			#solves the Windows' path length limit
+								#for that fix to work run BASH as Administrator!
+
 
 +------------------------------------------------------------------------------------------------------------+
 | Git Commands                                                                                               |
@@ -98,7 +102,7 @@ git log
 git log --stat
 git log --graph
 git log --graph -decorate -oneline -all
-
+git log --author="artiom"
 git status
 
 git diff				#show changes between "working directory" and "stage area"
