@@ -1,0 +1,285 @@
++------------------------------------------------------------------------------------------------------------+
+|   Git Remote                                                                                          |
++------------------------------------------------------------------------------------------------------------+
+
+PUSH
+
+	git remote add origin https://github.com/RelaRef/reflections.git
+	git remote -v
+		origin  https://github.com/RelaRef/reflections.git (fetch)
+		origin  https://github.com/RelaRef/reflections.git (push)
+
+	git push origin master
+		Counting objects: 34, done.
+		Delta compression using up to 4 threads.
+		Compressing objects: 100% (33/33), done.
+		Writing objects: 100% (34/34), 2.29 MiB | 333.00 KiB/s, done.
+		Total 34 (delta 13), reused 0 (delta 0)
+		To https://github.com/RelaRef/reflections.git
+		 * [new branch]      master -> master
+
+PULL
+
+	git pull origin master
+		remote: Counting objects: 3, done.
+		remote: Compressing objects: 100% (3/3), done.
+		remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+		Unpacking objects: 100% (3/3), done.
+		From https://github.com/RelaRef/reflections
+		 * branch            master     -> FETCH_HEAD
+		   3239f7d..3300d2a  master     -> origin/master
+		Updating 3239f7d..3300d2a
+		Fast-forward
+		 lesson_3_reflections.txt | 3 ++-
+		 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+MERGING REMOTE CHANGES
+
+	git pull origin master =	git branch -a
+					git fetch origin
+					git merge master origin/master
+					git log origin/master
+					git diff origin/master master
+					git merge origin/master master
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Fast-forward Merges                                                                        |
++------------------------------------------------------------------------------------------------------------+
+
+	fast-forward merges are possible when branches reach each other on the tree
+	
+	O->O->O->O	(yes here it is possible, hence A reaching B)
+	   B     A
+	
+		
+                O A
+	       /
+	O->O->O          (no fast forward merge possible)
+	       \
+		O B
+
++------------------------------------------------------------------------------------------------------------+
+| Git Get Gather (Config Information)                                                                        |
++------------------------------------------------------------------------------------------------------------+
+
+git config --get remote.origin.url	#get remote repository link
+git config -l				#get full config list
+
+
+
++------------------------------------------------------------------------------------------------------------+
+|   Git Useful Configuration                                                                                 |
++------------------------------------------------------------------------------------------------------------+
+GENERAL
+	git config --global core.editor "'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w"
+	git config --global push.default upstream
+	git config --global merge.conflictstyle diff3
+	git config --global core.autocrlf true
+
+ALIAS
+	git config --global alias.vislog "log --graph --decorate --oneline --all"
+
+
+SECURITY
+	
+	git config --global credential.helper wincred		#command line tool to save password locally
+
+ADVANCED
+	git config --system core.longpaths true			#solves the Windows' path length limit
+								#for that fix to work run BASH as Administrator!
+
+
++------------------------------------------------------------------------------------------------------------+
+| Git Commands                                                                                               |
++------------------------------------------------------------------------------------------------------------+
+
+git --version
+git clone https://github.com/udacity/asteroids.git
+git log
+git log --stat
+git log --graph
+git log --graph -decorate -oneline -all
+git log -n 1				#show only the last commit
+git log --author="artiom"
+
+git status
+
+git diff				#show changes between "working directory" and "stage area"
+git diff --staged			#show changes between "stage area" and "HEAD"
+git diff UID_OLD UID_NEW
+git diff BRANCH_NAME_A BRANCH_NAME_B
+git show COMMMIT_ID			#show the diff related to the parent
+
+git config --help			#opens in browser the help resource 
+
+git checkout UID_COMMMIT		#
+git checkout master			#to return to master HEAD
+git checkout -b new_branch_name		#
+
+
+git reset --hard			#use ex: recover a file deleted by accident,
+					#which shown in the "stage area" as deleted
+
+git gc					#If a branch is deleted and leaves some commits unreachable from existing branches, those 
+					#commits will continue to be accessible by commit id, until Git's garbage collection runs. This will happen 
+					#automatically from time to time, unless you actively turn it off. You can also run this process manually 
+					#with git gc.
+
+
+git branch BRANCH_A			#new branch
+git checkout BRANCH_A
+git merge BRANCH _A master
+git merge -abort			#run if you want to stop current merging in progress
+git branch -d BRANCH_B			#delete the branch after merge, only the branch label is deleted, commits are accessible through the master branch
+
+
+git push origin --delete <branchName>	#delete a remote branch
+
+git commit -m "Fixes #1"		#closes pull-request with the correspondig number
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| .gitconfig                                                                                                 |
++------------------------------------------------------------------------------------------------------------+
+#normaly at ome directory, cd ~
+[core]
+	#editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w
+	editor = 'C:/Program Files/EditPlus/editplus.exe'
+	autocrlf = true
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+	verbosity = 2
+[user]
+	email = choults.artiom@gmail.com
+	name = artiom
+[alias]
+	vislog = log --graph --decorate --oneline --all
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| .bash_profile                                                                                             |
++------------------------------------------------------------------------------------------------------------+
+
+	alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
+	alias edit="C:/Program\ Files/EditPlus/editplus.exe"
+	alias storm="C:/Program\ Files\ \(x86\)/JetBrains/PhpStorm\ 2016.1/bin/PhpStorm64.exe"
+	alias chrome="C:/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Bash Commands                                                                                              |
++------------------------------------------------------------------------------------------------------------+
+	ls -l | grep "git*"		#lists contents with git in the name
+	diff -u game_old.js game_new.js #show the differences
+	scp				#stands for "secure copy" and lets you securelly copy a directory from one computer to another.
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Git Technology Common Info                                                                                 |
++------------------------------------------------------------------------------------------------------------+
+	Made by Linus Torvalds to speed up, the programming of the Linux kernel.
+
+	Other types of version controls are Concurrent Version System CVS, and Subversion (for both central 
+	server needed).
+
+	Octopus is a strategy Git uses to combine many different versions of code together.
+
+	Git 2.9.0 using MinTTY default terminal of MSYS2
+
+	Symbol links trouble in Windows? Look at git v2.9.0 Release note.
+
+	HEAD is what Git calls the commit you are on. You can "detach" the HEAD by switching to a previous 
+	commit by git checkout snapshot_uid, return to master by using "git checkout master".
+	https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflowq
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+|   Git Terminology                                                                                          |
++------------------------------------------------------------------------------------------------------------+
+
+Synonims
+	version-control		a folder (a copy of some contents representing another version)
+	commit			checkpoint (represents version of the file), a snapshot
+	branch			a label
+	merge			combine
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Git Rules                                                                                                  |
++------------------------------------------------------------------------------------------------------------+
+
+	* One Commit Per Logical Change, Staging Area may be used for this purpose.
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Git Concept Map                                                                                            |
++------------------------------------------------------------------------------------------------------------+
+	TYPE-OF:	manual saving, dropbox, google docs, wikipedia are 
+	PART-OF:	commit is the
+	OPERATES-ON:	git diff operates on commits
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+| Useful Tools                                                                                               |
++------------------------------------------------------------------------------------------------------------+
+
+Diagramming Tools
+	* gliffy
+	* yUML
+
+
+
+
++------------------------------------------------------------------------------------------------------------+
+|   Cource Reflections Backup                                                                                |
++------------------------------------------------------------------------------------------------------------+
+
+You do not lose your previous work with the version control.
+Manual Commits. Give you more control on what and when something is saved. By commenting every logical 
+commit, you create handy overview.
+
+08/07/2016 14:00
+Multi-File commits by git are seen as dependencies. One file version control is ok for any small task. But 
+big projects require more complicated workflow with possibility to break it up in pieces defined by a bunch 
+of the steps, to fix my mistakes by going forward and backward. Kind of get everything in the right way 
+before showing to other people. It has steep learning curve but it's worth it because power is so great, and 
+once you learn it, once you are past the curve you can really do a lot. And these are the things that you 
+couldn't do without learning so much.
+
+What do you think are the pros and cons of manually chosing when to create a commit, like you do in 
+Git, vs having versions autamaticaly saved, like Google Docs dose?
+
+
+08/07/2016 14:00
+How can you use the commands git log and git diff to view the history of files?
+
+How might using version control make you more confident to make changes that could 
+break something?
+Lewis Kaneshiro
+Udacity Course Developer
+Risk taker, no fear to the project, freaking out, try to make it work again, able to rethink the entire code 
+base, rethink parts honestly not approached. In general, exploration, making a program incrementally 
+better, easy, no worries about going back and fix a project that's broken. Explore deep concepts, 
+architecture.git 
+Now How Do You Want to Use Git?
+Speed up my programming thoughts.
